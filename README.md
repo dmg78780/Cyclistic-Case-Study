@@ -4,7 +4,7 @@ Course: [Google Business Intelligence Certificate](https://www.coursera.org/prof
 
 ## Background
 
-In this case study, I will perform many real-world tasks of a junior data analyst at a fictional company, Cyclistic. Cyclistic is a fictional bike-share company based in New York City, NY. Currently, there are bike stations located throughout Manhattan and neighboring boroughs. Customers are able to rent bikes for easy travel between stations at these locations.
+In this case study, I will perform many real-world tasks of a data analyst at a fictional company, Cyclistic. Cyclistic is a fictional bike-share company based in New York City, NY. Currently, there are bike stations located throughout Manhattan and neighboring boroughs. Customers are able to rent bikes for easy travel between stations at these locations.
 
 ## The Problem
 
@@ -39,6 +39,8 @@ The strategy document helps to align with stakeholders about project deliverable
 
 ## Data Processing
 
-We have been provided two public datasets:
+Two public datasets have been provided on BigQuery:
 - [NYC Citi Bike Trips](https://console.cloud.google.com/marketplace/details/city-of-new-york/nyc-citi-bike?project=eco-notch-431817-a3)
 - [Census Bureau US Boundaries](https://console.cloud.google.com/marketplace/product/united-states-census-bureau/us-geographic-boundaries?project=eco-notch-431817-a3)
+
+To ensure data maturity, we will need to create a pipeline using ETL (Extract, Transform, and Load). This will gather the data from both source systems, covert them into a useful format, and load it into a centralized data warehouse.
