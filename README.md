@@ -1,6 +1,6 @@
 # Cyclistic Case Study
 
-Course: [Google Business Intelligence Certificate] <https://www.coursera.org/professional-certificates/google-business-intelligence>
+Course: [Google Business Intelligence Certificate] (https://www.coursera.org/professional-certificates/google-business-intelligence "Google Business Intelligence Certificate")
 
 ## Background
 
