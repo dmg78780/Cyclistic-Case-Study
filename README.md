@@ -39,3 +39,6 @@ The strategy document helps to align with stakeholders about project deliverable
 
 ## Data Processing
 
+We have been provided two public datasets:
+- [NYC Citi Bike Trips](https://console.cloud.google.com/marketplace/details/city-of-new-york/nyc-citi-bike?project=eco-notch-431817-a3)
+- [Census Bureau US Boundaries](https://console.cloud.google.com/marketplace/product/united-states-census-bureau/us-geographic-boundaries?project=eco-notch-431817-a3)
