@@ -29,6 +29,24 @@ GROUP BY trip_year
 ORDER BY trip_year
 LIMIT 10;
 
+#Trip Growth
+WITH tripgrowth AS (
+  SELECT EXTRACT(YEAR FROM starttime) AS trip_year
+  ,COUNT(*) AS num_trips
+  FROM bigquery-public-data.new_york_citibike.citibike_trips
+  WHERE EXTRACT(YEAR FROM starttime) >=0
+  GROUP BY trip_year
+)
+SELECT
+trip_year
+,num_trips
+,LAG(num_trips) OVER (ORDER BY trip_year) AS prev_year_trips
+,num_trips - LAG(num_trips) OVER (ORDER BY trip_year) AS trip_difference
+,ROUND((num_trips - LAG(num_trips) OVER (ORDER BY trip_year))/ LAG(num_trips) OVER (ORDER BY trip_year) * 100, 1) AS percentage_growth
+FROM tripgrowth
+ORDER BY trip_year
+LIMIT 10;
+
 #Trends from 2015
 SELECT EXTRACT (YEAR FROM starttime) AS trip_year
 ,EXTRACT (MONTH FROM starttime) AS trip_month_number
