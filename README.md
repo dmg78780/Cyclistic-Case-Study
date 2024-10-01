@@ -1,6 +1,6 @@
 # Cyclistic Case Study
 
-Course: Google Business Intelligence Certificate https://www.coursera.org/professional-certificates/google-business-intelligence 
+Course: [Google Business Intelligence Certificate] (https://www.coursera.org/professional-certificates/google-business-intelligence) 
 
 ## Background
 
@@ -23,4 +23,19 @@ These insights will be used to help support the growth of Cyclistic.
 
 ## Project Planning
 
+In order to ensure that we stay on task with the big-picture and small details, project planning will be broken down into three phases with accompanying documents:
+
+### The Stakeholder Requirements Document
+
+This document enables me to capture stakeholder requests and requirements to better understand their needs before planning the rest of the project details or strategy.
+
+### The Project Requirements 
+
+The project requirements document helps brainstorm what is needed to achieve the stakeholder requirements.
+
+### The Strategy Document
+
+The strategy document helps to align with stakeholders about project deliverables. This includes what visualization functionalities, metrics and charts are used.
+
+## Data Processing
 
