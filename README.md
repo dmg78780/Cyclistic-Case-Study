@@ -1,6 +1,6 @@
 # Cyclistic Case Study
 
-Course: [Google Business Intelligence Certificate] (https://www.coursera.org/professional-certificates/google-business-intelligence "Google Business Intelligence Certificate")
+Course: Google Business Intelligence Certificate https://www.coursera.org/professional-certificates/google-business-intelligence 
 
 ## Background
 
@@ -18,3 +18,9 @@ Cyclistic's Customer Growth Team is creating a business plan for next year. The 
 - Understand how current line of bikes are used
 - How can we apply customer usage insights to inform new station growth?
 - How different users (subscribers and non-subscribers) use bikes.
+
+These insights will be used to help support the growth of Cyclistic.
+
+## Project Planning
+
+
