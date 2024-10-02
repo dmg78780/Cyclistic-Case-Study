@@ -61,3 +61,32 @@ FROM `bigquery-public-data.new_york_citibike.citibike_trips`
 WHERE EXTRACT(YEAR FROM starttime) = 2015
 GROUP BY trip_year, trip_month, trip_month_number, gender, usertype
 ORDER BY trip_month_number;
+
+#Congestion at each Station
+WITH daily_station_trips AS (
+  SELECT DATE(starttime) AS trip_date
+  ,start_station_id AS station_id
+  ,COUNT(*) AS trips_out
+  FROM `bigquery-public-data.new_york_citibike.citibike_trips`
+  GROUP BY trip_date, start_station_id
+  UNION ALL
+  SELECT DATE(starttime) AS trip_date
+  ,end_station_id AS station_id
+  ,-COUNT(*) AS trips_in
+  FROM `bigquery-public-data.new_york_citibike.citibike_trips`
+  GROUP BY trip_date, end_station_id
+)
+SELECT trip_date
+,station_id
+,SUM(trips_out) AS net_trips
+FROM daily_station_trips
+GROUP BY trip_date, station_id
+ORDER BY trip_date, station_id;
+
+#Most traveled day of the week
+SELECT FORMAT_DATE('%A', DATE(starttime)) AS day_of_week
+,COUNT(*) AS trip_number
+FROM `bigquery-public-data.new_york_citibike.citibike_trips`
+WHERE EXTRACT(YEAR FROM starttime) >= 0
+GROUP BY day_of_week
+ORDER BY trip_number DESC;
