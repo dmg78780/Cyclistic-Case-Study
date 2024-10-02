@@ -10,6 +10,7 @@ ORDER BY num_trips DESC
 LIMIT 10;
 
 #Average Trip Length
+
 SELECT start_station_name
 ,end_station_name
 ,AVG(tripduration) AS avg_trip_minutes
@@ -20,6 +21,7 @@ ORDER BY avg_trip_minutes DESC
 LIMIT 10;
 
 #Number of Yearly Trips, AVG of Length of Trip
+
 SELECT EXTRACT (YEAR FROM starttime) AS trip_year
 ,ROUND(AVG(tripduration)) as avg_trip_minutes
 ,COUNT(*) as num_trips
@@ -29,7 +31,17 @@ GROUP BY trip_year
 ORDER BY trip_year
 LIMIT 10;
 
+#Most traveled day of the week
+
+SELECT FORMAT_DATE('%A', DATE(starttime)) AS day_of_week
+,COUNT(*) AS trip_number
+FROM `bigquery-public-data.new_york_citibike.citibike_trips`
+WHERE EXTRACT(YEAR FROM starttime) >= 0
+GROUP BY day_of_week
+ORDER BY trip_number DESC;
+
 #Trip Growth
+
 WITH tripgrowth AS (
   SELECT EXTRACT(YEAR FROM starttime) AS trip_year
   ,COUNT(*) AS num_trips
@@ -48,6 +60,7 @@ ORDER BY trip_year
 LIMIT 10;
 
 #Trends from 2015
+
 SELECT EXTRACT (YEAR FROM starttime) AS trip_year
 ,EXTRACT (MONTH FROM starttime) AS trip_month_number
 ,FORMAT_DATE('%B', DATE(starttime)) as trip_month
@@ -63,6 +76,7 @@ GROUP BY trip_year, trip_month, trip_month_number, gender, usertype
 ORDER BY trip_month_number;
 
 #Congestion at each Station
+
 WITH daily_station_trips AS (
   SELECT DATE(starttime) AS trip_date
   ,start_station_id AS station_id
@@ -83,10 +97,4 @@ FROM daily_station_trips
 GROUP BY trip_date, station_id
 ORDER BY trip_date, station_id;
 
-#Most traveled day of the week
-SELECT FORMAT_DATE('%A', DATE(starttime)) AS day_of_week
-,COUNT(*) AS trip_number
-FROM `bigquery-public-data.new_york_citibike.citibike_trips`
-WHERE EXTRACT(YEAR FROM starttime) >= 0
-GROUP BY day_of_week
-ORDER BY trip_number DESC;
+
