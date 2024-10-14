@@ -31,7 +31,7 @@ This document enables me to capture stakeholder requests and requirements to bet
 
 ### The Project Requirements 
 
-The project requirements document helps brainstorm what is needed to achieve the stakeholder requirements.
+The [Project Requirements Document](https://docs.google.com/document/d/1zDnNjGHbwMNVZcvShWyiMs_jj1f1WG7FsRnvooGfRuE/edit?usp=sharing) helps brainstorm what is needed to achieve the stakeholder requirements.
 
 ### The Strategy Document
 
@@ -42,5 +42,7 @@ The strategy document helps to align with stakeholders about project deliverable
 Two public datasets have been provided on BigQuery:
 - [NYC Citi Bike Trips](https://console.cloud.google.com/marketplace/details/city-of-new-york/nyc-citi-bike?project=eco-notch-431817-a3)
 - [Census Bureau US Boundaries](https://console.cloud.google.com/marketplace/product/united-states-census-bureau/us-geographic-boundaries?project=eco-notch-431817-a3)
+- [GSOD from the National Oceanic and Atmospheric Administration](https://console.cloud.google.com/marketplace/details/noaa-public/gsod?project=eco-notch-431817-a3)
+- [Zip Codes Excel Sheet](https://docs.google.com/spreadsheets/d/1IIbH-GM3tdmM5tl56PHhqI7xxCzqaBCU0ylItxk_sy0/template/preview#gid=806359255)
 
 To ensure data maturity, we will need to create a pipeline using ETL (Extract, Transform, and Load). This will gather the data from both source systems, covert them into a useful format, and load it into a centralized data warehouse.
