@@ -27,7 +27,7 @@ In order to ensure that we stay on task with the big-picture and small details, 
 
 ### The Stakeholder Requirements Document
 
-This document enables me to capture stakeholder requests and requirements to better understand their needs before planning the rest of the project details or strategy.
+The [Stakeholder Requirements Document](https://docs.google.com/document/d/19JuVN5qY5vfJJYMBdPMETev7EW8IdGakcjcSU1Oi5Ys/edit?tab=t.00) enables me to capture stakeholder requests and requirements to better understand their needs before planning the rest of the project details or strategy.
 
 ### The Project Requirements 
 
