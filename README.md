@@ -46,3 +46,7 @@ Two public datasets have been provided on BigQuery:
 - [Zip Codes Excel Sheet](https://docs.google.com/spreadsheets/d/1IIbH-GM3tdmM5tl56PHhqI7xxCzqaBCU0ylItxk_sy0/template/preview#gid=806359255)
 
 To ensure data maturity, we will need to create a pipeline using ETL (Extract, Transform, and Load). This will gather the data from both source systems, covert them into a useful format, and load it into a centralized data warehouse.
+
+## Creating a Dashboard
+
+This was created to help visualize the data.
