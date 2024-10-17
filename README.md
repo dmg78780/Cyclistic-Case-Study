@@ -49,4 +49,4 @@ To ensure data maturity, we will need to create a pipeline using ETL (Extract, T
 
 ## Creating a Dashboard
 
-This was created to help visualize the data.
+[This](https://public.tableau.com/views/Cyclistic_17285747416490/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) was created to help visualize the data.
